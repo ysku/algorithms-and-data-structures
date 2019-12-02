@@ -21,4 +21,4 @@ int length(array_stack *stack);
 
 void delete_stack(array_stack *stack);
 
-#endifs
+#endif
