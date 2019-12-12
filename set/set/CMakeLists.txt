@@ -1,8 +1,8 @@
-PROJECT(set)
+PROJECT(.)
 
 SET(LIB_SOURCE_FILES
-    set.c
-    set_test.c)
+        set.c
+        set_test.c)
 
 ADD_LIBRARY(${PROJECT_NAME} set.c)
 ADD_LIBRARY(set::set ALIAS ${PROJECT_NAME})
