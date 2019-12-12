@@ -1,4 +1,4 @@
-PROJECT(.)
+PROJECT(set)
 
 SET(LIB_SOURCE_FILES
         set.c
