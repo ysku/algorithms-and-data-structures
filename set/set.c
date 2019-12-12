@@ -80,3 +80,19 @@ void print_set(set *s) {
     }
     printf("\n");
 }
+
+set *set_union(set *s1, set *s2) {
+    set *s = create_set();
+
+    node *n1 = s1->next;
+    while (n1 != NULL) {
+        add_value(s, n1->value);
+        n1 = n1->next;
+    }
+    node *n2 = s2->next;
+    while (n2 != NULL) {
+        add_value(s, n2->value);
+        n2 = n2->next;
+    }
+    return s;
+}

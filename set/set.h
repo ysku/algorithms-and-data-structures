@@ -25,4 +25,6 @@ int remove_value(set *s, int value);
 
 void print_set(set *s);
 
+set *set_union(set *s1, set *s2);
+
 #endif
