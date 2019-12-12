@@ -49,8 +49,34 @@ void test_set_union() {
     printf("[test] test set union finished!!\n");
 }
 
+void test_set_intersection() {
+    printf("[test] test set intersection started!!\n");
+
+    set *s1 = create_set();
+    set *s2 = create_set();
+
+    int n1[] = {1, 2, 3, 4, 5};
+    int size1 = sizeof(n1) / sizeof(int);
+    int n2[] = {4, 5, 6, 7, 8};
+    int size2 = sizeof(n2) / sizeof(int);
+
+    for (int i = 0; i < size1; i++) add_value(s1, n1[i]);
+    for (int i = 0; i < size2; i++) add_value(s2, n2[i]);
+
+    set *s3 = set_intersection(s1, s2);
+
+    print_set(s3);
+
+    int n3[] = {4, 5};
+    int size3 = sizeof(n3) / sizeof(int);
+    for (int i = 0; i < size3; i++) assert( remove_value(s3, n3[i]) == n3[i] );
+
+    printf("[test] test set intersection finished!!\n");
+}
+
 int main() {
     test_set();
     test_set_union();
+    test_set_intersection();
     return 0;
 }

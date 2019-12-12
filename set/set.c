@@ -45,6 +45,17 @@ void add_value(set *s, int value) {
     return;
 }
 
+int has_value(set *s, int value) {
+    node *current = s->next;
+    while (current != NULL) {
+        if (current->value == value) {
+            return 1;
+        }
+        current = current->next;
+    }
+    return 0;
+}
+
 int remove_value(set *s, int value) {
     node *prev = NULL;
     node *current = s->next;
@@ -93,6 +104,22 @@ set *set_union(set *s1, set *s2) {
     while (n2 != NULL) {
         add_value(s, n2->value);
         n2 = n2->next;
+    }
+    return s;
+}
+
+set *set_intersection(set *s1, set *s2) {
+    // Computational Complexity : O(n^2)
+    // has_value : O(n)
+    // add_value : O(n)
+    set *s = create_set();
+
+    node *current = s1->next;
+    while (current != NULL) {   // O(n)
+        if (has_value(s2, current->value)) {    // O(n)
+            add_value(s, current->value);       // O(n)
+        }
+        current = current->next;
     }
     return s;
 }

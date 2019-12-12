@@ -27,4 +27,6 @@ void print_set(set *s);
 
 set *set_union(set *s1, set *s2);
 
+set *set_intersection(set *s1, set *s2);
+
 #endif
