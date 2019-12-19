@@ -3,6 +3,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.14)
 PROJECT(algorithms_and_data_structure)
 
 ADD_SUBDIRECTORY(hash/chaininghash)
+ADD_SUBDIRECTORY(hash/openaddresshash)
 ADD_SUBDIRECTORY(linkedlist/circularlist)
 ADD_SUBDIRECTORY(linkedlist/linkedlist)
 ADD_SUBDIRECTORY(queue/arrayqueue)
