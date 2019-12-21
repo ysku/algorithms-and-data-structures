@@ -1,0 +1,10 @@
+PROJECT(trie)
+
+SET(LIB_SOURCE_FILES
+    trie.c
+    trie_test.c)
+
+ADD_LIBRARY(${PROJECT_NAME} trie.c)
+ADD_LIBRARY(trie::trie ALIAS ${PROJECT_NAME})
+
+ADD_EXECUTABLE(${PROJECT_NAME}_test ${LIB_SOURCE_FILES})
