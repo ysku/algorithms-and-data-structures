@@ -1,0 +1,6 @@
+PROJECT(factorial)
+
+SET(LIB_SOURCE_FILES
+    factorial.c)
+
+ADD_EXECUTABLE(${PROJECT_NAME} ${LIB_SOURCE_FILES})
